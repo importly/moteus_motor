@@ -77,6 +77,7 @@ async def control_loop():
 
 async def main():
 	control_task = asyncio.create_task(control_loop())
+	print(f"Server started at {address}:{port}")
 	server = await asyncio.start_server(handle_client, address, port)
 
 	async with server:
