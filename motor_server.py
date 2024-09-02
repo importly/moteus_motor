@@ -2,12 +2,14 @@ import asyncio
 import os
 import moteus
 import sys
+import json
 
 address = os.getenv('ADDRESS', 'localhost')
 port = int(os.getenv('PORT', 5135))
 
 controllers = {
 	1: moteus.Controller(id=1),
+	2: moteus.Controller(id=2),
 }
 
 last_poses = {cid: None for cid in controllers}
@@ -19,28 +21,29 @@ async def handle_client(r, w):
 	print(f"Connected with {client_add}")
 
 	try:
-		data = await r.readuntil(b'\n')
+		data = await r.readuntil(b'\n\n')
 		if not data.strip():
 			print(f"No data from {client_add}")
 			return
-		print(parse_commands(data.decode().strip()))
 		commands = parse_commands(data.decode().strip())
 		responses = []
-		for cid, position in commands.items():
+		print(f"Received commands from {client_add}: {commands}")
+		for _, command in commands.items():
+			cid = command.get("id")
 			if cid in controllers:
-				state = await controllers[cid].set_position(position=position, query=True)
-				last_poses[cid] = position
-				response = f"id={cid};ep={state.values[moteus.Register.POSITION]}\n"
-				responses.append(response)
+				if command.get("d"):
+					last_poses[cid] = command.get("p")
+				state = await controllers[cid].query()
+				encoder_position = state.values[moteus.Register.POSITION]
+				responses.append({
+					"id": cid,
+					"p": command.get("p"),
+					"ep": encoder_position
+				})
 
-		response = ''.join(responses) + "\n"
+		response = json.dumps(responses) + "\n\n"
 		w.write(response.encode())
-		await w.drain()
-	except asyncio.IncompleteReadError:
-		print(f"incomplete data from {client_add}. data: {data}")
-	except ValueError as e:
-		print(f"valueError from {client_add}: {e}")
-		w.write(b"invalid command\n")
+		print(f"Sent response to {client_add}: {response}")
 		await w.drain()
 	except Exception as e:
 		print(f"unexpected error from {client_add}: {e}")
@@ -50,15 +53,34 @@ async def handle_client(r, w):
 
 
 def parse_commands(data):
+	default_commands = {
+		"id": None,
+		"p": 0.0,
+		"d": True,
+		# add more stuff here if needed from client
+	}
+
 	commands = {}
-	parts = data.split(';')
-	for part in parts:
-		if '=' in part:
-			key, value = part.split('=')
-			if key == 'id':
-				current_id = int(value)
-			elif key == 'p':
-				commands[current_id] = float(value)
+	try:
+		json_data = json.loads(data)
+		for item in json_data:
+			motor_id = item.get("id")
+			if motor_id is not None:
+				if motor_id not in commands:
+					commands[motor_id] = {k: v for k, v in default_commands.items()}
+				for key, value in item.items():
+					if key in default_commands:
+						if isinstance(default_commands[key], int):
+							commands[motor_id][key] = int(value)
+						elif isinstance(default_commands[key], float):
+							commands[motor_id][key] = float(value)
+						elif isinstance(default_commands[key], bool):
+							commands[motor_id][key] = bool(value)
+						else:
+							commands[motor_id][key] = value
+	except json.JSONDecodeError as error:
+		print(f"JSON decode error: {error}")
+
 	return commands
 
 

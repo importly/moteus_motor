@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6c24c80-c57a-48d1-98a6-86cb74cd9903" name="Changes" comment="gitignore">
+    <list default="true" id="d6c24c80-c57a-48d1-98a6-86cb74cd9903" name="Changes" comment="motor configurations setup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/port testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/motor_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motor_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/motor_server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,7 +36,9 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stdlib/asyncio/transports.pyi" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/miniconda3/envs/moetus/Lib/site-packages/moteus/__init__.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/miniconda3/envs/moetus/Lib/site-packages/moteus/fdcanusb.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/miniconda3/envs/moetus/Lib/site-packages/moteus/moteus.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -44,13 +53,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.motor_server.executor": "Debug",
     "Python.port testing.executor": "Run",
     "Python.port_tester.executor": "Run",
+    "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Shell Script.Unnamed.executor": "Run",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/aryan/PycharmProjects/moteus_motor/port testing.py",
+    "last_opened_file_path": "C:/Users/aryan/PycharmProjects/moteus_motor",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,6 +70,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\aryan\PycharmProjects\moteus_motor" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.motor_server">
     <configuration name="motor_server" type="PythonConfigurationType" factoryName="Python">
       <module name="moteus_motor" />
@@ -107,8 +123,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18034.82" />
-        <option value="bundled-python-sdk-975db3bf15a3-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18034.82" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PY-242.21829.153" />
+        <option value="bundled-python-sdk-464836ebc622-b74155a9e76b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.21829.153" />
       </set>
     </attachedChunks>
   </component>
@@ -124,7 +140,14 @@
       <workItem from="1723682026094" duration="1036000" />
       <workItem from="1723757613287" duration="11667000" />
       <workItem from="1724121869706" duration="47000" />
-      <workItem from="1724195639367" duration="865000" />
+      <workItem from="1724195639367" duration="4299000" />
+      <workItem from="1724719533983" duration="114000" />
+      <workItem from="1724968659664" duration="2298000" />
+      <workItem from="1725054455699" duration="838000" />
+      <workItem from="1725159232688" duration="3481000" />
+      <workItem from="1725221347103" duration="127000" />
+      <workItem from="1725221581827" duration="653000" />
+      <workItem from="1725236436306" duration="6419000" />
     </task>
     <task id="LOCAL-00001" summary="working server and also feedback">
       <option name="closed" value="true" />
@@ -142,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723774778831</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="motor configurations setup">
+      <option name="closed" value="true" />
+      <created>1724197210378</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1724197210378</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,10 +194,13 @@
     <MESSAGE value="working server and also feedback" />
     <MESSAGE value="gitignore" />
     <MESSAGE value="Revert &quot;Initial commit&quot;&#10;&#10;This reverts commit 6c344b81" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Initial commit&quot;&#10;&#10;This reverts commit 6c344b81" />
+    <MESSAGE value="motor configurations setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="motor configurations setup" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/moteus_motor$port_tester.coverage" NAME="port_tester Coverage Results" MODIFIED="1723757646237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/moteus_motor$port_testing.coverage" NAME="port testing Coverage Results" MODIFIED="1724196296764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/moteus_motor$motor_server.coverage" NAME="motor_server Coverage Results" MODIFIED="1725246858691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/moteus_motor$test.coverage" NAME="test Coverage Results" MODIFIED="1725221605697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
