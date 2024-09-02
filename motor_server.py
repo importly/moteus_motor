@@ -27,23 +27,26 @@ async def handle_client(r, w):
 			return
 		commands = parse_commands(data.decode().strip())
 		responses = []
-		print(f"Received commands from {client_add}: {commands}")
+		# print(f"Received commands from {client_add}: {commands}")
 		for _, command in commands.items():
 			cid = command.get("id")
 			if cid in controllers:
 				if command.get("d"):
 					last_poses[cid] = command.get("p")
 				state = await controllers[cid].query()
-				encoder_position = state.values[moteus.Register.POSITION]
+
 				responses.append({
 					"id": cid,
-					"p": command.get("p"),
-					"ep": encoder_position
+					"ep": state.values[moteus.Register.POSITION],
+					"v": state.values[moteus.Register.VELOCITY],
+					"t": state.values[moteus.Register.TORQUE],
+					"vo": state.values[moteus.Register.VOLTAGE],
+					"te": state.values[moteus.Register.TEMPERATURE],
 				})
 
 		response = json.dumps(responses) + "\n\n"
 		w.write(response.encode())
-		print(f"Sent response to {client_add}: {response}")
+		# print(f"Sent response to {client_add}: {response}")
 		await w.drain()
 	except Exception as e:
 		print(f"unexpected error from {client_add}: {e}")
