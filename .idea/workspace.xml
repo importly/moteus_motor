@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6c24c80-c57a-48d1-98a6-86cb74cd9903" name="Changes" comment="added json">
+    <list default="true" id="d6c24c80-c57a-48d1-98a6-86cb74cd9903" name="Changes" comment="added json serving new stuff part 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motor_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/motor_server.py" afterDir="false" />
     </list>
@@ -183,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725247673664</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added json serving new stuff part 2">
+      <option name="closed" value="true" />
+      <created>1725320357727</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725320357727</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,12 +214,13 @@
     <MESSAGE value="Revert &quot;Initial commit&quot;&#10;&#10;This reverts commit 6c344b81" />
     <MESSAGE value="motor configurations setup" />
     <MESSAGE value="added json" />
-    <option name="LAST_COMMIT_MESSAGE" value="added json" />
+    <MESSAGE value="added json serving new stuff part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="added json serving new stuff part 2" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/moteus_motor$port_tester.coverage" NAME="port_tester Coverage Results" MODIFIED="1723757646237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/moteus_motor$port_testing.coverage" NAME="port testing Coverage Results" MODIFIED="1724196296764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/moteus_motor$motor_server.coverage" NAME="motor_server Coverage Results" MODIFIED="1725320191773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/moteus_motor$motor_server.coverage" NAME="motor_server Coverage Results" MODIFIED="1725331005962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/moteus_motor$test.coverage" NAME="test Coverage Results" MODIFIED="1725312326845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -3,6 +3,7 @@ import os
 import moteus
 import sys
 import json
+import time
 
 address = os.getenv('ADDRESS', 'localhost')
 port = int(os.getenv('PORT', 5135))
@@ -52,7 +53,7 @@ async def handle_client(r, w):
 		print(f"unexpected error from {client_add}: {e}")
 	finally:
 		w.close()
-		# print(f"connection closed with {client_add}")
+	# print(f"connection closed with {client_add}")
 
 
 def parse_commands(data):
@@ -93,11 +94,22 @@ async def control_loop():
 	for controller in controllers.values():
 		await controller.set_stop()
 
+	frame_count = 0
+	start_time = time.time()
+
 	while True:
 		for cid, controller in controllers.items():
 			if last_poses[cid] is not None:
 				await controller.set_position(position=last_poses[cid], query=True)
-		await asyncio.sleep(0.005)
+		await asyncio.sleep(0.0)  # idk u j need it
+
+		frame_count += 1
+		elapsed_time = time.time() - start_time
+		if elapsed_time >= 1.0:
+			fps = frame_count / elapsed_time
+			print(f"FPS: {fps:.2f}")
+			frame_count = 0
+			start_time = time.time()
 
 
 async def main():
