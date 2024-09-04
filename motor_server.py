@@ -112,6 +112,9 @@ async def control_loop():
 			start_time = time.time()
 
 
+
+
+
 async def main():
 	control_task = asyncio.create_task(control_loop())
 	print(f"Server started at {address}:{port}")
@@ -133,3 +136,4 @@ if __name__ == '__main__':
 			print(f"Server crashed with error: {e}")
 			print("Restarting server...")
 			os.execv(sys.executable, ['python'] + sys.argv)
+
