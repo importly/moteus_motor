@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6c24c80-c57a-48d1-98a6-86cb74cd9903" name="Changes" comment="updated motor serverasdf">
-      <change afterPath="$PROJECT_DIR$/server.pyx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+    <list default="true" id="d6c24c80-c57a-48d1-98a6-86cb74cd9903" name="Changes" comment="Cython update">
+      <change afterPath="$PROJECT_DIR$/cpp/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/.idea/cpp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpp/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stuff.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +65,7 @@
     &quot;Python.motor_server.executor&quot;: &quot;Run&quot;,
     &quot;Python.port testing.executor&quot;: &quot;Run&quot;,
     &quot;Python.port_tester.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stuff.executor&quot;: &quot;Run&quot;,
     &quot;Python.test.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Shell Script.Unnamed.executor&quot;: &quot;Run&quot;,
@@ -73,6 +77,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -129,8 +134,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PY-242.21829.153" />
-        <option value="bundled-python-sdk-464836ebc622-b74155a9e76b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.21829.153" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
+        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
       </set>
     </attachedChunks>
   </component>
@@ -156,6 +161,15 @@
       <workItem from="1725236436306" duration="7831000" />
       <workItem from="1725300859545" duration="6744000" />
       <workItem from="1725421540588" duration="3155000" />
+      <workItem from="1725482289188" duration="2805000" />
+      <workItem from="1725488381062" duration="1069000" />
+      <workItem from="1725494520334" duration="16000" />
+      <workItem from="1725494553025" duration="1209000" />
+      <workItem from="1725817659405" duration="71000" />
+      <workItem from="1726117220435" duration="345000" />
+      <workItem from="1726337084275" duration="941000" />
+      <workItem from="1727394033758" duration="290000" />
+      <workItem from="1727738786700" duration="27000" />
     </task>
     <task id="LOCAL-00001" summary="working server and also feedback">
       <option name="closed" value="true" />
@@ -213,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725424960929</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Cython update">
+      <option name="closed" value="true" />
+      <created>1725482328845</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725482328845</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +261,8 @@
     <MESSAGE value="added json serving new stuff part 2" />
     <MESSAGE value="updated motor server" />
     <MESSAGE value="updated motor serverasdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated motor serverasdf" />
+    <MESSAGE value="Cython update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cython update" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/moteus_motor$main.coverage" NAME="main Coverage Results" MODIFIED="1725425238106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

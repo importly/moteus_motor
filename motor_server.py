@@ -10,7 +10,6 @@ port = int(os.getenv('PORT', 5135))
 
 controllers = {
 	1: moteus.Controller(id=1),
-	2: moteus.Controller(id=2),
 }
 
 last_poses = {cid: None for cid in controllers}
