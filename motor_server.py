@@ -18,7 +18,7 @@ last_poses = {cid: None for cid in controllers}
 async def handle_client(r, w):
 	global last_poses
 	client_add = w.get_extra_info('peername')
-	# print(f"Connected with {client_add}")
+	print(f"Connected with {client_add}")
 
 	try:
 		data = await r.readuntil(b'\n\n')

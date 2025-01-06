@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="moetus" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="moetus" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="moteus_motor" project-jdk-type="Python SDK" />
 </project>
